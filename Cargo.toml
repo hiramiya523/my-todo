@@ -1,5 +1,5 @@
 [package]
-name = "my-todo"
+name = "rustwi"
 version = "0.1.0"
 edition = "2021"
 
@@ -16,4 +16,4 @@ tracing-subscriber = { version="0.3", features = ["env-filter"] }
 
 askama = "0.12"
 # シリアライズ/デシリアライズ ⇒ 
- serde = { version = "1.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }

@@ -14,6 +14,7 @@ async fn main() {
         .init();
 
     // let app = Router::new().route("/", get(handler));
+    // ! プロジェクト名と一致させる必要あり
     let app = rustwi::app();
 
 
