@@ -1,0 +1,19 @@
+[package]
+name = "my-todo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# https://zenn.dev/tkzwhr/books/rust-webapp-tutorial/viewer/setup
+#axum = "0.7"
+axum = { git = "https://github.com/hi-rustin/axum.git", rev = "c0c52495edc3a02890c41d3b45d14edb9bde166a" }
+tokio = { version = "1.0", features = ["full"] }
+
+tracing = "0.1"
+tracing-subscriber = { version="0.3", features = ["env-filter"] }
+
+askama = "0.12"
+# シリアライズ/デシリアライズ ⇒ 
+ serde = { version = "1.0", features = ["derive"] }
