@@ -8,6 +8,8 @@ mod controllers {
 
 mod response;
 
+mod database;
+
 mod views {
   mod home;
   mod partial {

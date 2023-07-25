@@ -15,7 +15,8 @@ async fn main() {
 
     // let app = Router::new().route("/", get(handler));
     // ! プロジェクト名と一致させる必要あり
-    let app = rustwi::app();
+    // let app = rustwi::app();
+    let app = rustwi::app().await;
 
 
     let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")

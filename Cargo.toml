@@ -17,3 +17,11 @@ tracing-subscriber = { version="0.3", features = ["env-filter"] }
 askama = "0.12"
 # シリアライズ/デシリアライズ ⇒ 
 serde = { version = "1.0", features = ["derive"] }
+
+# 非同期に優れているDBドライバ
+tokio-postgres = { version = "0.7", features = ["with-chrono-0_4"] }
+# DBクレート
+bb8 = "0.8"
+bb8-postgres = "0.8"
+
+dotenv = "0.15"

@@ -1,11 +1,15 @@
 use axum::{extract::Form, response::IntoResponse, Router, routing};
 use serde::Deserialize;
+use std::sync::Arc;
 
+
+use crate::database::ConnectionPool;
 use crate::response;
 use crate::views::{Home, Tweet};
 
-pub fn tweets() -> Router {
+pub fn tweets(pool: Arc<ConnectionPool>) -> Router {
     Router::new().route("/new", routing::post(post))
+      .with_state(pool)
 }
 
 async fn post(form: Form<TweetForm>) -> impl IntoResponse {
